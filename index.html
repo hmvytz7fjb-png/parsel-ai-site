@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PARSEL AI | Arsa yatırımı için ön fizibilite raporu</title>
+<meta name="description" content="Bir arsaya teklif vermeden önce imar, tapu, piyasa, maliyet ve sözleşme tarafını tek raporda görün. PARSEL AI size açık bir öneri ve makul arsa fiyatı veriyor.">
+<meta name="theme-color" content="#121a2c">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="PARSEL AI">
+<meta property="og:title" content="Bu arsaya yatırım yapılır mı?">
+<meta property="og:description" content="İmar, tapu, piyasa, maliyet ve sözleşme tarafını tek raporda topluyoruz. Sonunda açık bir öneri veriyoruz.">
+<meta property="og:url" content="https://parsel-ai.vercel.app/">
+<meta property="og:image" content="https://parsel-ai.vercel.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PARSEL AI: Bu arsaya yatırım yapılır mı?">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://parsel-ai.vercel.app/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='5' fill='%23121a2c'/%3E%3Cpath d='M7 9.5 18.5 7.5 20.5 20 8.5 21.5Z' fill='%238aa9f7'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/archivo-latin-2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-latin-ext-1.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PARSEL AI",
+  "url": "https://parsel-ai.vercel.app/",
+  "description": "Arsa yatırımı için imar, tapu, piyasa, maliyet ve sözleşme analizini tek raporda toplayan ön fizibilite hizmeti.",
+  "areaServed": "TR",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "email": "yusufsezer2019@gmail.com",
+    "availableLanguage": "Turkish"
+  }
+}
+</script>
+<style>
+/* Layout: sade bir girişim sayfası. Az etiket, sohbet dilinde metin; ürün ekranı (rapor) sayfanın kalbi. */
+:root {
+  --ink: #121a2c;
+  --ink-2: #1a2440;
+  --paper: #f3f4f7;
+  --surface: #ffffff;
+  --line: #d9dde6;
+  --muted: #5a6376;
+
+  --accent: #2f5fd0;
+  --risk: #b8352c;
+  --fin: #a8781c;
+  --go: #1f7a4a;
+
+  --on-dark: #e8ecf4;
+  --on-dark-muted: #a3aec4;
+  --line-dark: #2b3757;
+  --accent-dk: #8aa9f7;
+  --risk-dk: #f08a7e;
+  --fin-dk: #e3b55c;
+  --go-dk: #62d098;
+
+  --f-display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --f-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--f-body); font-size: 1.0625rem; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+img, svg { max-width: 100%; }
+a { color: inherit; }
+p { margin: 0; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 3px; }
+.is-dark :focus-visible, .hero :focus-visible, .nav :focus-visible, .apply :focus-visible, .footer :focus-visible, .showcase :focus-visible { outline-color: var(--accent-dk); }
+
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip { position: absolute; left: 16px; top: -48px; z-index: 100; padding: .6rem 1rem; border-radius: 6px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; }
+.skip:focus { top: 12px; }
+
+/* ---------- Yazı ---------- */
+h1, h2, h3 { text-wrap: balance; }
+h2 { margin: 0; font-family: var(--f-display); font-stretch: 104%; font-weight: 740; font-size: clamp(1.8rem, 3.4vw, 2.7rem); line-height: 1.12; letter-spacing: -.015em; }
+h3 { margin: 0; font-family: var(--f-display); font-stretch: 102%; font-weight: 700; font-size: 1.2rem; line-height: 1.3; }
+.lede { max-width: 58ch; font-size: 1.125rem; color: var(--muted); }
+.is-dark .lede { color: var(--on-dark-muted); }
+
+section { padding: clamp(72px, 9vw, 112px) 0; }
+.bg-surface { background: var(--surface); }
+.is-dark { background: var(--ink); color: var(--on-dark); }
+.sec-head { display: grid; gap: 14px; max-width: 720px; margin-bottom: clamp(32px, 5vw, 52px); }
+
+/* ---------- Düğmeler ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+  padding: .8rem 1.25rem; border-radius: 6px; border: 1px solid transparent;
+  font-family: var(--f-body); font-size: .95rem; font-weight: 600; line-height: 1.2;
+  text-decoration: none; cursor: pointer; transition: background-color .2s, border-color .2s;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: #2550b8; }
+.btn-ghost { border-color: var(--line-dark); color: var(--on-dark); }
+.btn-ghost:hover { border-color: var(--on-dark-muted); }
+.btn-outline { border-color: var(--line); color: var(--ink); background: var(--surface); }
+.btn-outline:hover { border-color: var(--ink); }
+.btn[disabled] { opacity: .6; cursor: progress; }
+
+/* ---------- Menü ---------- */
+.nav { position: sticky; top: 0; z-index: 50; background: rgba(18, 26, 44, .95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line-dark); color: var(--on-dark); }
+.nav-inner { display: flex; align-items: center; gap: 2rem; height: 64px; }
+.brand { display: inline-flex; align-items: center; gap: .6rem; font-family: var(--f-display); font-stretch: 116%; font-weight: 800; font-size: 1.05rem; letter-spacing: .02em; color: inherit; text-decoration: none; }
+.brand b { font-weight: inherit; color: var(--accent-dk); }
+.brand svg { flex: none; }
+.nav-links { display: flex; gap: 1.6rem; list-style: none; margin: 0 0 0 auto; padding: 0; }
+.nav-links a { color: var(--on-dark-muted); text-decoration: none; font-size: .93rem; transition: color .2s; }
+.nav-links a:hover, .nav-links a[aria-current="true"] { color: var(--on-dark); }
+.nav-links a[aria-current="true"] { text-decoration: underline; text-decoration-color: var(--accent-dk); text-decoration-thickness: 2px; text-underline-offset: 8px; }
+.nav-cta { padding: .6rem 1rem; font-size: .88rem; }
+.menu-btn { display: none; margin-left: auto; padding: 8px; border-radius: 6px; background: transparent; border: 1px solid var(--line-dark); color: var(--on-dark); cursor: pointer; }
+.only-mobile { display: none; }
+
+/* ---------- Giriş ---------- */
+.hero { position: relative; overflow: hidden; background: var(--ink); color: var(--on-dark); padding: clamp(56px, 7vw, 92px) 0 clamp(72px, 8vw, 108px); }
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(138, 169, 247, .06) 1px, transparent 1px), linear-gradient(90deg, rgba(138, 169, 247, .06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 75% 50%, #000 20%, transparent 100%);
+          mask-image: radial-gradient(ellipse 70% 70% at 75% 50%, #000 20%, transparent 100%);
+}
+.hero-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.02fr); gap: 48px clamp(32px, 5vw, 64px); align-items: center; }
+.hero h1 { margin: 0 0 24px; font-family: var(--f-display); font-weight: 800; font-stretch: 108%; font-size: clamp(2.5rem, 5.4vw, 4.4rem); line-height: 1.04; letter-spacing: -.025em; }
+.hero .lede { color: #c6cedd; font-size: 1.12rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.hero-note { margin-top: 22px; font-size: .95rem; color: var(--on-dark-muted); }
+
+/* Pafta */
+.sheet { position: relative; margin: 0; background: var(--ink-2); border: 1px solid var(--line-dark); border-radius: 10px; padding: 12px 14px 14px; box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .7); }
+.sheet-head { display: flex; justify-content: space-between; gap: 12px; padding: 2px 2px 10px; margin-bottom: 10px; border-bottom: 1px solid var(--line-dark); font-family: var(--f-mono); font-size: .7rem; letter-spacing: .12em; color: var(--on-dark-muted); }
+.map { display: block; width: 100%; height: auto; }
+.map .p { fill: rgba(255, 255, 255, .015); stroke: #5d6b8c; stroke-width: 1; }
+.map .b { fill: rgba(255, 255, 255, .045); stroke: #46537a; stroke-width: 1; }
+.map .road-fill { fill: rgba(255, 255, 255, .05); }
+.map .road-edge { fill: none; stroke: #6f7da0; stroke-width: 1.2; }
+.map text { font-family: var(--f-mono); fill: #7c89a8; font-size: 11px; }
+.map .road-label { font-size: 9px; letter-spacing: .3em; fill: #8a96b3; }
+.map .hl-fill { fill: url(#hatch); animation: fade .8s ease 1.2s both; }
+.map .hl-wash { fill: rgba(138, 169, 247, .1); animation: fade .8s ease 1.2s both; }
+.map .hl-stroke { fill: none; stroke: var(--accent-dk); stroke-width: 2.2; stroke-linejoin: round; stroke-dasharray: 100; animation: draw 1.5s cubic-bezier(.6, 0, .2, 1) .2s both; }
+.map .hatch-line { stroke: var(--accent-dk); stroke-opacity: .28; stroke-width: 1.4; }
+.map .hl-num { font-size: 24px; font-weight: 600; fill: var(--on-dark); text-anchor: middle; }
+.map .hl-cap { font-size: 8.5px; letter-spacing: .18em; fill: var(--accent-dk); text-anchor: middle; }
+.map .dimline { stroke: var(--accent-dk); stroke-width: 1; fill: none; }
+.map .dim-text { font-size: 8px; letter-spacing: .22em; fill: var(--accent-dk); text-anchor: middle; }
+
+.verdict { position: absolute; right: -22px; bottom: -36px; width: min(320px, 66%); background: var(--surface); color: var(--ink); border-radius: 8px; border-left: 4px solid var(--go); padding: 16px 18px; box-shadow: 0 24px 48px -20px rgba(0, 0, 0, .55); animation: rise .6s cubic-bezier(.2, .7, .2, 1) 1s both; }
+.verdict-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 12px; }
+.verdict-top small { font-size: .75rem; color: var(--muted); }
+.v-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin: 0 0 12px; }
+.v-metrics dt { font-size: .72rem; color: var(--muted); }
+.v-metrics dd { margin: 0; font-weight: 600; font-size: 1.15rem; line-height: 1.25; }
+.verdict p { padding-top: 10px; border-top: 1px solid var(--line); font-size: .82rem; line-height: 1.45; color: var(--muted); }
+.chip-go { display: inline-flex; align-items: center; gap: 7px; padding: 5px 11px 5px 7px; border-radius: 999px; background: #e2f2e9; color: #135a34; font-family: var(--f-display); font-stretch: 110%; font-weight: 800; font-size: .8rem; letter-spacing: .04em; }
+.chip-go svg { width: 16px; height: 16px; flex: none; }
+
+/* ---------- Sorun ---------- */
+.split { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: 24px clamp(32px, 6vw, 88px); align-items: start; }
+.prose { display: grid; gap: 1.1em; max-width: 62ch; font-size: 1.09rem; }
+.prose .aside { padding-left: 18px; border-left: 3px solid var(--risk); color: var(--ink); font-weight: 500; }
+
+/* ---------- Nasıl çalışıyor ---------- */
+.how { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px; }
+.how li { display: grid; gap: 10px; align-content: start; padding-top: 18px; border-top: 2px solid var(--ink); }
+.how .num { font-family: var(--f-display); font-weight: 760; font-size: 2rem; line-height: 1; color: var(--accent); }
+.how p { color: var(--muted); }
+
+.lookfor { margin-top: clamp(56px, 7vw, 84px); display: grid; grid-template-columns: minmax(0, .7fr) minmax(0, 2fr); gap: 24px clamp(32px, 5vw, 64px); }
+.lookfor > div > p { margin-top: 10px; color: var(--muted); }
+.check-list { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 44px; }
+.check-list div { display: grid; gap: 6px; align-content: start; }
+.check-list dt { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1.05rem; }
+.check-list dt::before { content: ""; flex: none; width: 10px; height: 10px; border-radius: 2px; background: var(--c); }
+.check-list dd { margin: 0; color: var(--muted); }
+
+/* ---------- Örnek rapor ---------- */
+.board { background: var(--surface); color: var(--ink); border-radius: 12px; overflow: hidden; box-shadow: 0 40px 80px -40px rgba(0, 0, 0, .65); }
+.board-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; padding: 12px 22px; border-bottom: 1px solid var(--line); background: #f7f8fa; font-size: .86rem; color: var(--muted); }
+.board-bar strong { color: var(--ink); font-weight: 600; }
+.board-bar .end { margin-left: auto; }
+.board-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.1fr); border-bottom: 1px solid var(--line); }
+.verdict-block { display: grid; gap: 12px; align-content: start; padding: 26px 26px 24px; border-left: 4px solid var(--go); border-right: 1px solid var(--line); }
+.verdict-block .chip-go { justify-self: start; padding: 7px 14px 7px 9px; font-size: 1rem; }
+.verdict-block .chip-go svg { width: 20px; height: 20px; }
+.verdict-block p { color: var(--muted); font-size: .97rem; }
+.verdict-block p strong { color: var(--ink); font-weight: 600; }
+.tiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tile { display: grid; gap: 4px; align-content: start; padding: 24px 22px; border-left: 1px solid var(--line); }
+.tile:first-child { border-left: 0; }
+.tile-label { font-size: .85rem; color: var(--muted); }
+.tile-value { white-space: nowrap; font-size: clamp(1.45rem, 2.1vw, 1.9rem); font-weight: 600; line-height: 1.15; letter-spacing: -.01em; }
+.tile-sub { font-size: .78rem; color: var(--muted); line-height: 1.4; }
+
+.ledger-head { display: flex; align-items: center; gap: 8px; margin: 0; font-family: var(--f-body); font-size: .92rem; font-weight: 600; letter-spacing: 0; }
+.ledger-head::before { content: ""; width: 14px; height: 3px; background: var(--c); }
+.board-due { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
+.due { display: grid; gap: 14px; align-content: start; padding: 22px 24px 24px; border-left: 1px solid var(--line); }
+.due:first-child { border-left: 0; }
+.rows { margin: 0; display: grid; }
+.rows div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 7px 0; border-top: 1px solid #edf0f4; font-size: .9rem; }
+.rows div:first-child { border-top: 0; }
+.rows dt { color: var(--muted); }
+.rows dd { margin: 0; font-weight: 600; text-align: right; }
+.rows dd .pill { margin-left: 6px; vertical-align: 1px; }
+.due-note { padding: 10px 12px; border-radius: 6px; background: var(--paper); font-size: .84rem; line-height: 1.5; }
+.due-src { font-size: .75rem; color: var(--muted); }
+.mk { margin: 0; display: grid; gap: 4px; }
+.mk-plot { position: relative; height: 70px; margin: 0 14px; }
+.mk-axis { position: absolute; left: 0; right: 0; top: 34px; height: 1px; background: var(--line); }
+.mk-band { position: absolute; top: 28px; height: 13px; border-radius: 4px; background: var(--fin); }
+.mk-mark { position: absolute; top: 0; width: 0; height: 52px; }
+.mk-mark::before { content: ""; position: absolute; left: -1px; top: 18px; width: 2px; height: 32px; border-radius: 1px; background: var(--ink); }
+.mk-mark span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; font-size: .76rem; font-weight: 600; }
+.mk-tick { position: absolute; bottom: 0; transform: translateX(-50%); font-family: var(--f-mono); font-size: .66rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.board-bottom { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); }
+.risks, .deal { display: grid; gap: 12px; align-content: start; padding: 24px 26px 28px; }
+.risks { border-right: 1px solid var(--line); }
+.risk-list { list-style: none; margin: 0; padding: 0; display: grid; }
+.risk-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 10px 0; border-top: 1px solid #edf0f4; font-size: .95rem; }
+.risk-list li:first-child { border-top: 0; }
+.pill { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; padding: 3px 9px; border-radius: 999px; font-size: .74rem; font-weight: 600; }
+.pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.pill-high { background: #fbe9e7; color: #8f241d; }
+.pill-mid { background: #fbf1dc; color: #7a560f; }
+.pill-ok { background: #e2f2e9; color: #135a34; }
+.pill-watch { background: #eef0f4; color: #4a5263; }
+
+.deal-cap { font-size: .8rem; color: var(--muted); }
+.range { margin: 0; }
+.range-plot { position: relative; height: 138px; margin: 0 10px; }
+.rp-axis { position: absolute; left: 0; right: 0; top: 64px; height: 1px; background: var(--line); }
+.rp-band { position: absolute; top: 58px; height: 13px; border-radius: 4px; background: var(--go); }
+.rp-mark { position: absolute; top: 0; width: 0; height: 100%; }
+.rp-max::before { content: ""; position: absolute; left: -1px; top: 32px; width: 2px; height: 46px; background: var(--ink); border-radius: 1px; }
+.rp-ask::before { content: ""; position: absolute; left: -7px; top: 57px; width: 14px; height: 14px; border-radius: 50%; background: var(--risk); box-shadow: 0 0 0 2px var(--surface); }
+.rp-label { position: absolute; top: 6px; white-space: nowrap; font-size: .8rem; color: var(--ink); }
+.rp-label b { font-weight: 600; }
+.rp-max .rp-label { transform: translateX(-50%); }
+.rp-ask .rp-label { right: -10px; }
+.rp-gap { position: absolute; top: 84px; height: 7px; border: 1px solid var(--muted); border-top: 0; }
+.rp-gap span { position: absolute; left: 50%; top: 11px; transform: translateX(-50%); white-space: nowrap; font-size: .76rem; color: var(--muted); }
+.rp-tick { position: absolute; bottom: 0; transform: translateX(-50%); font-family: var(--f-mono); font-size: .7rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.range-key { margin: 18px 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 24px; }
+.range-key div { display: grid; gap: 2px; }
+.range-key dt { display: flex; align-items: center; gap: 8px; font-size: .8rem; color: var(--muted); }
+.range-key dd { margin: 0 0 0 20px; font-weight: 600; font-size: 1rem; }
+.range-key .sw { flex: none; width: 12px; height: 12px; }
+.range-key .sw-ask { border-radius: 50%; background: var(--risk); }
+.range-key .sw-max { width: 3px; height: 14px; margin: 0 4.5px; background: var(--ink); }
+.range-key .sw-band { border-radius: 3px; background: var(--go); }
+.range-key .sw-gap { height: 6px; border: 1px solid var(--muted); border-top: 0; }
+.deal-note { font-size: .9rem; color: var(--muted); }
+.board-foot { padding: 14px 22px; border-top: 1px solid var(--line); background: #f7f8fa; font-size: .82rem; color: var(--muted); }
+
+/* ---------- Sözleşme ---------- */
+.legal-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.1fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+.legal-copy { display: grid; gap: 18px; }
+.legal-copy .prose { font-size: 1.06rem; }
+.clause-card { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--risk); border-radius: 10px; overflow: hidden; }
+.cc-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; align-items: baseline; padding: 18px 22px; border-bottom: 1px solid var(--line); }
+.cc-head h3 { font-size: 1.08rem; }
+.cc-head small { font-size: .8rem; color: var(--muted); }
+.cc-areas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-bottom: 1px solid var(--line); background: #fafbfc; }
+.cc-areas div { display: grid; gap: 6px; justify-items: start; padding: 12px 16px; border-left: 1px solid var(--line); border-top: 1px solid var(--line); font-size: .86rem; }
+.cc-areas div:nth-child(3n + 1) { border-left: 0; }
+.cc-areas div:nth-child(-n + 3) { border-top: 0; }
+.cc-body { display: grid; gap: 16px; padding: 20px 22px 22px; }
+.cc-clause { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.cc-clause strong { font-family: var(--f-display); font-stretch: 102%; font-size: 1.05rem; }
+.cc-block { display: grid; gap: 6px; }
+.cc-label { font-size: .8rem; font-weight: 600; color: var(--muted); }
+.cc-old { padding: 12px 14px; background: #fdf3f2; border-left: 2px solid var(--risk); font-size: .92rem; color: #4d2420; }
+.cc-why { font-size: .92rem; }
+.cc-new { padding: 12px 14px; background: #eef6f1; border-left: 2px solid var(--go); font-size: .92rem; color: #173d29; }
+.cc-foot { padding: 12px 22px; border-top: 1px solid var(--line); background: #fafbfc; font-size: .82rem; color: var(--muted); }
+
+/* ---------- Fiyatlar ---------- */
+.plans { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.plan { display: grid; grid-template-rows: auto auto auto 1fr auto; gap: 12px; padding: 30px 28px; border-left: 1px solid var(--line); }
+.plan:first-child { border-left: 0; box-shadow: inset 0 3px 0 var(--accent); }
+.plan-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.plan-top h3 { font-size: 1.15rem; }
+.badge { font-size: .74rem; font-weight: 600; padding: 3px 8px; border-radius: 4px; background: #e8eefb; color: #23468f; }
+.plan-for { font-size: .92rem; color: var(--muted); }
+.price { font-family: var(--f-display); font-stretch: 104%; font-weight: 740; font-size: clamp(1.5rem, 2.2vw, 1.9rem); line-height: 1.1; letter-spacing: -.01em; }
+.price small { display: block; margin-top: 4px; font-family: var(--f-body); font-stretch: 100%; font-weight: 400; font-size: .86rem; letter-spacing: 0; color: var(--muted); }
+.plan .btn { justify-self: start; }
+
+/* ---------- Ankara slaytı ---------- */
+.showcase { padding: clamp(22px, 4vw, 44px); border-radius: 16px; background: #0d1322; color: var(--on-dark); }
+.showcase .sec-head { margin-bottom: clamp(22px, 3vw, 32px); }
+.showcase .lede { color: var(--on-dark-muted); }
+.slider { display: grid; gap: 16px; }
+.slides { position: relative; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 12px; background: var(--ink-2); touch-action: pan-y; }
+.slide { position: absolute; inset: 0; margin: 0; opacity: 0; visibility: hidden; transition: opacity 1s ease, visibility 0s linear 1s; }
+.slide.is-active { z-index: 1; opacity: 1; visibility: visible; transition: opacity 1s ease; }
+.slide img { display: block; width: 100%; height: 100%; object-fit: cover; transform-origin: 60% 45%; }
+.slide.is-active img { animation: kenburns 7s ease-out both; }
+.slider.is-paused .slide.is-active img { animation-play-state: paused; }
+.slide::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to top, rgba(9, 13, 24, .9) 0%, rgba(9, 13, 24, .35) 40%, transparent 65%); }
+.slide figcaption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; display: grid; gap: 8px; padding: clamp(18px, 3.2vw, 40px); text-shadow: 0 1px 10px rgba(9, 13, 24, .75); }
+.slide-loc { font-size: .85rem; color: #c6cedd; }
+.slide-name { font-family: var(--f-display); font-stretch: 108%; font-weight: 800; font-size: clamp(1.9rem, 4.6vw, 3.4rem); line-height: 1; letter-spacing: -.02em; color: #fff; }
+.slide-credit { font-size: .75rem; color: rgba(232, 236, 244, .75); }
+.slide-credit a { color: inherit; text-underline-offset: 2px; }
+.slide-credit a:hover { color: #fff; }
+.slide-badge { display: inline-block; margin-left: 8px; padding: 1px 7px; border-radius: 4px; background: var(--fin-dk); color: #2a1d05; font-size: .72rem; font-weight: 600; text-shadow: none; vertical-align: 1px; }
+.slider-ui { display: flex; align-items: center; gap: 14px; }
+.counter { min-width: 56px; font-size: .85rem; color: var(--on-dark-muted); font-variant-numeric: tabular-nums; }
+.counter b { font-weight: 600; color: var(--on-dark); }
+.progress { flex: 1; height: 2px; border-radius: 2px; background: var(--line-dark); overflow: hidden; }
+.progress span { display: block; height: 100%; background: var(--accent-dk); transform: scaleX(0); transform-origin: left center; }
+.progress span.run { animation: bar 6s linear forwards; }
+.slider.is-paused .progress span { animation-play-state: paused; }
+.sl-btn { display: inline-grid; place-items: center; flex: none; width: 42px; height: 42px; padding: 0; border: 1px solid var(--line-dark); border-radius: 50%; background: transparent; color: var(--on-dark); cursor: pointer; transition: border-color .2s, background-color .2s; }
+.sl-btn:hover { border-color: var(--on-dark-muted); background: rgba(255, 255, 255, .04); }
+.sl-btn svg { width: 16px; height: 16px; }
+.sl-btn .i-play { display: none; }
+.sl-btn.is-paused .i-play { display: block; }
+.sl-btn.is-paused .i-pause { display: none; }
+.thumbs { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.thumb { display: grid; gap: 7px; width: 100%; padding: 0; border: 0; background: none; cursor: pointer; font: inherit; font-size: .84rem; text-align: left; color: var(--on-dark-muted); transition: color .2s; }
+.thumb img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 6px; opacity: .5; outline: 2px solid transparent; outline-offset: 2px; transition: opacity .3s, outline-color .3s; }
+.thumb:hover { color: var(--on-dark); }
+.thumb:hover img { opacity: .85; }
+.thumb[aria-current="true"] { color: var(--on-dark); }
+.thumb[aria-current="true"] img { opacity: 1; outline-color: var(--accent-dk); }
+.showcase-note { margin-top: 20px; font-size: .84rem; color: #97a3ba; max-width: 80ch; }
+
+/* ---------- Hakkımızda ---------- */
+.about { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px clamp(32px, 6vw, 88px); align-items: start; }
+.about .prose { margin-top: 18px; }
+.inv-box { display: grid; gap: 14px; padding: 28px; border-radius: 12px; background: var(--surface); border-left: 4px solid var(--accent); }
+.inv-box p { color: var(--muted); }
+.inv-box .btn { justify-self: start; margin-top: 4px; }
+
+/* ---------- Başvuru ---------- */
+.apply { background: var(--ink); color: var(--on-dark); }
+.apply-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(36px, 6vw, 88px); align-items: start; }
+.apply h2 { font-size: clamp(2rem, 4vw, 3.2rem); font-stretch: 108%; font-weight: 800; }
+.apply-copy { display: grid; gap: 20px; }
+.apply-copy .lede { color: #c6cedd; }
+.contact { padding-top: 18px; border-top: 1px solid var(--line-dark); color: var(--on-dark-muted); }
+.contact strong { color: var(--on-dark); font-weight: 600; }
+.contact a { color: var(--accent-dk); }
+
+.form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; padding: 28px; background: var(--ink-2); border: 1px solid var(--line-dark); border-radius: 12px; }
+.field { display: grid; gap: 7px; }
+.field.full { grid-column: 1 / -1; }
+.field label { font-size: .86rem; color: var(--on-dark-muted); }
+.field label .opt { color: #8f9bb4; }
+.field input, .field select, .field textarea { width: 100%; padding: .72rem .85rem; border-radius: 6px; background: #101729; border: 1px solid var(--line-dark); color: var(--on-dark); font: inherit; font-size: .95rem; transition: border-color .2s; }
+.field textarea { resize: vertical; min-height: 104px; }
+.field input:hover, .field select:hover, .field textarea:hover { border-color: #3d4b70; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent-dk); box-shadow: 0 0 0 3px rgba(138, 169, 247, .2); }
+.field input:user-invalid, .field select:user-invalid { border-color: var(--risk-dk); }
+.field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--on-dark-muted) 50%), linear-gradient(135deg, var(--on-dark-muted) 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 2.2rem; }
+.field select option { background: #101729; color: var(--on-dark); }
+.topic { grid-column: 1 / -1; min-width: 0; margin: 0; padding: 0; border: 0; }
+.topic legend { padding: 0; margin-bottom: 8px; font-size: .86rem; color: var(--on-dark-muted); }
+.topics { display: flex; flex-wrap: wrap; gap: 8px; }
+.topic-opt { position: relative; }
+.topic-opt input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.topic-opt span { display: inline-block; padding: .5rem .9rem; border-radius: 999px; border: 1px solid var(--line-dark); background: #101729; color: var(--on-dark-muted); font-size: .88rem; transition: border-color .2s, background-color .2s, color .2s; }
+.topic-opt:hover span { border-color: #3d4b70; }
+.topic-opt input:checked + span { border-color: var(--accent-dk); background: rgba(138, 169, 247, .14); color: var(--on-dark); }
+.topic-opt input:focus-visible + span { outline: 2px solid var(--accent-dk); outline-offset: 2px; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.noscript-note { grid-column: 1 / -1; padding: 10px 14px; border-radius: 6px; background: rgba(227, 181, 92, .12); color: var(--fin-dk); font-size: .9rem; }
+.noscript-note a { color: inherit; }
+.form-foot { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; }
+.form-foot small { color: #97a3ba; font-size: .82rem; max-width: 44ch; }
+.form-foot small a { color: var(--accent-dk); }
+.status { grid-column: 1 / -1; display: none; padding: 10px 14px; border-radius: 6px; font-size: .9rem; }
+.status.show { display: block; }
+.status.ok { background: rgba(98, 208, 152, .12); color: var(--go-dk); }
+.status.warn { background: rgba(227, 181, 92, .12); color: var(--fin-dk); }
+.status.err { background: rgba(240, 138, 126, .12); color: var(--risk-dk); }
+
+/* ---------- Alt bilgi ---------- */
+.footer { background: #0d1322; color: var(--on-dark-muted); padding: 40px 0 36px; font-size: .9rem; }
+.footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 32px; }
+.footer .brand { color: var(--on-dark); }
+.footer-links { display: flex; flex-wrap: wrap; gap: 10px 22px; list-style: none; margin: 0; padding: 0; }
+.footer-links a { text-decoration: none; }
+.footer-links a:hover { color: var(--on-dark); text-decoration: underline; }
+.footer-legal { flex-basis: 100%; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 20px; border-top: 1px solid #1f2a45; font-size: .82rem; color: #8d99b1; }
+
+/* ---------- Hareket ---------- */
+@keyframes fade { from { opacity: 0; } }
+@keyframes draw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+@keyframes kenburns { from { transform: scale(1.1); } to { transform: scale(1); } }
+@keyframes bar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ---------- Ekran boyutları ---------- */
+@media (max-width: 1120px) {
+  .verdict { right: 12px; }
+}
+@media (max-width: 1000px) {
+  .menu-btn { display: inline-flex; }
+  .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; gap: 0; padding: 8px clamp(16px, 4vw, 40px) 20px; background: var(--ink); border-bottom: 1px solid var(--line-dark); }
+  .nav-links a { display: block; padding: 12px 0; font-size: 1rem; border-bottom: 1px solid var(--line-dark); }
+  .nav.open .nav-links { display: flex; }
+  .only-mobile { display: list-item; }
+  .only-mobile a { color: var(--accent-dk); }
+  .nav-inner { gap: 12px; }
+  .nav-cta { display: none; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  .sheet { margin-bottom: 24px; }
+  .board-top, .board-due, .board-bottom { grid-template-columns: minmax(0, 1fr); }
+  .verdict-block { border-right: 0; border-bottom: 1px solid var(--line); }
+  .due { border-left: 0; border-top: 1px solid var(--line); }
+  .due:first-child { border-top: 0; }
+  .risks { border-right: 0; border-bottom: 1px solid var(--line); }
+  .legal-grid, .apply-grid, .about { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 860px) {
+  .split, .lookfor { grid-template-columns: minmax(0, 1fr); }
+  .how, .check-list { grid-template-columns: minmax(0, 1fr); }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tile:nth-child(3) { border-left: 0; }
+  .tile:nth-child(n + 3) { border-top: 1px solid var(--line); }
+  .plans { grid-template-columns: minmax(0, 1fr); }
+  .plan { border-left: 0; }
+  .plan:nth-child(n + 2) { border-top: 1px solid var(--line); }
+}
+@media (max-width: 640px) {
+  .verdict { position: static; width: auto; margin-top: 12px; }
+  .sheet { margin-bottom: 0; }
+  .cc-areas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cc-areas div { border-left: 1px solid var(--line); border-top: 1px solid var(--line); }
+  .cc-areas div:nth-child(odd) { border-left: 0; }
+  .cc-areas div:nth-child(-n + 2) { border-top: 0; }
+  .range-key { grid-template-columns: minmax(0, 1fr); }
+  .rp-max .rp-label span { display: none; }
+  .form { grid-template-columns: minmax(0, 1fr); padding: 20px; }
+  .slides { aspect-ratio: 4 / 3; }
+  .slide-credit { font-size: .7rem; }
+  .thumbs { display: flex; overflow-x: auto; padding: 4px; scroll-snap-type: x mandatory; }
+  .thumbs li { flex: 0 0 116px; scroll-snap-align: start; }
+}
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">İçeriğe geç</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="PARSEL AI ana sayfa">
+      <svg width="26" height="26" viewBox="0 0 28 28" aria-hidden="true"><rect x=".75" y=".75" width="26.5" height="26.5" rx="4" fill="none" stroke="#2b3757" stroke-width="1.5"/><path d="M7 9.5 18.5 7.5 20.5 20 8.5 21.5Z" fill="#8aa9f7" fill-opacity=".25" stroke="#8aa9f7" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <span>PARSEL <b>AI</b></span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#nasil">Nasıl çalışıyor</a></li>
+      <li><a href="#ornek">Örnek rapor</a></li>
+      <li><a href="#fiyatlar">Fiyatlar</a></li>
+      <li><a href="#hakkimizda">Hakkımızda</a></li>
+      <li class="only-mobile"><a href="#basvuru">Pilot başvurusu</a></li>
+    </ul>
+    <a class="btn btn-primary nav-cta" href="#basvuru" data-topic="pilot">Pilot başvurusu</a>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links">
+      <span class="sr-only" id="menu-label">Menüyü aç</span>
+      <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Bu arsaya yatırım yapılır mı?</h1>
+      <p class="lede">Bir arsaya teklif vermeden önce imar durumuna, tapudaki kayıtlara ve bölgedeki satış fiyatlarına bakarsınız. Sonra maliyeti hesaplar, sözleşmeyi avukata okutursunuz. PARSEL AI bu işlerin hepsini tek bir raporda topluyor ve sonunda size açık bir öneri veriyor.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#basvuru" data-topic="pilot">Pilot projeye başvurun</a>
+        <a class="btn btn-ghost" href="#ornek">Örnek raporu görün</a>
+      </div>
+      <p class="hero-note">Şu an Ankara, İstanbul ve İzmir'den ilk 10 pilot projeyi alıyoruz.</p>
+    </div>
+
+    <figure class="sheet">
+      <div class="sheet-head"><span>ÖRNEK PAFTA</span><span>K ↑ · 1:1000</span></div>
+      <svg class="map" viewBox="0 0 560 440" role="img" aria-labelledby="map-title">
+        <title id="map-title">Örnek pafta: caddeye cepheli 12 numaralı parsel</title>
+        <defs>
+          <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="7" class="hatch-line"/>
+          </pattern>
+        </defs>
+        <path class="road-fill" d="M0 318 L560 268 L560 302 L0 352 Z"/>
+        <path class="road-edge" d="M0 318 L560 268 M0 352 L560 302"/>
+        <text class="road-label" x="30" y="339" transform="rotate(-5.1 30 339)">CADDE</text>
+        <g>
+          <path class="p" d="M0 170 L115 165 L120 307.3 L0 318 Z"/>
+          <path class="p" d="M262 150 L390 140 L400 282.3 L275 293.4 Z"/>
+          <path class="p" d="M390 140 L560 128 L560 268 L400 282.3 Z"/>
+          <path class="p" d="M0 40 L150 34 L160 160.4 L115 165 L0 170 Z"/>
+          <path class="p" d="M150 34 L330 24 L335 144.3 L262 150 L160 160.4 Z"/>
+          <path class="p" d="M330 24 L560 12 L560 128 L390 140 L335 144.3 Z"/>
+          <path class="p" d="M0 352 L140 339.5 L150 440 L0 440 Z"/>
+          <path class="p" d="M140 339.5 L330 322.5 L340 440 L150 440 Z"/>
+          <path class="p" d="M330 322.5 L560 302 L560 440 L340 440 Z"/>
+        </g>
+        <g>
+          <rect class="b" x="22" y="200" width="70" height="60" transform="rotate(-3 57 230)"/>
+          <rect class="b" x="298" y="178" width="76" height="62" transform="rotate(-4.5 336 209)"/>
+          <rect class="b" x="430" y="165" width="96" height="70" transform="rotate(-4.5 478 200)"/>
+          <rect class="b" x="30" y="70" width="86" height="56" transform="rotate(-2 73 98)"/>
+          <rect class="b" x="190" y="60" width="110" height="56" transform="rotate(-3 245 88)"/>
+          <rect class="b" x="390" y="44" width="130" height="60" transform="rotate(-3 455 74)"/>
+          <rect class="b" x="30" y="382" width="80" height="42" transform="rotate(-5 70 403)"/>
+          <rect class="b" x="190" y="370" width="100" height="48" transform="rotate(-5 240 394)"/>
+        </g>
+        <g>
+          <text x="52" y="292">11</text>
+          <text x="330" y="270">13</text>
+          <text x="470" y="258">14</text>
+          <text x="70" y="152">4</text>
+          <text x="240" y="140">5</text>
+          <text x="450" y="124">6</text>
+          <text x="62" y="372">21</text>
+          <text x="232" y="358">22</text>
+          <text x="440" y="345">23</text>
+        </g>
+        <path class="hl-wash" d="M115 165 L262 150 L275 293.4 L120 307.3 Z"/>
+        <path class="hl-fill" d="M115 165 L262 150 L275 293.4 L120 307.3 Z"/>
+        <path class="hl-stroke" pathLength="100" d="M115 165 L262 150 L275 293.4 L120 307.3 Z"/>
+        <text class="hl-num" x="194" y="228">12</text>
+        <text class="hl-cap" x="194" y="246">ÖRNEK PARSEL</text>
+        <path class="dimline" d="M120 309 L121.7 327 M275 295 L276.7 313 M121.4 323.2 L276.4 309.3"/>
+        <text class="dim-text" x="200" y="331" transform="rotate(-5.16 200 331)">YOL CEPHESİ</text>
+      </svg>
+
+      <div class="verdict">
+        <div class="verdict-top">
+          <span class="chip-go">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#1f7a4a"/><path d="M4.8 8.2 7 10.3 11.2 5.9" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            ŞARTLI AL
+          </span>
+          <small>Örnek proje</small>
+        </div>
+        <dl class="v-metrics">
+          <div><dt>Tahmini gelir</dt><dd>142,8 M$</dd></div>
+          <div><dt>Proje kârı</dt><dd>24,8 M$</dd></div>
+          <div><dt>IRR</dt><dd>%21,4</dd></div>
+        </dl>
+        <p>Finansman, sözleşme ve tapu riskleri çözülmeden işlem tamamlanmamalı.</p>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section id="sorun">
+  <div class="wrap split">
+    <h2>Arsa kararı hâlâ dağınık dosyalarla veriliyor.</h2>
+    <div class="prose">
+      <p>İmar durumu belediyeden, tapu kaydı tapu müdürlüğünden, emsal fiyatlar ilan sitelerinden geliyor. Sözleşmeyi avukat okuyor, hesabı biri Excel'de yapıyor. Herkes kendi parçasına bakıyor ama parçaları yan yana koyan pek olmuyor.</p>
+      <p>Sonuç çoğu zaman tanıdık: Haciz şerhi tapu devrinde fark ediliyor, mirasçılardan biri imza vermiyor ya da daireler hesaptaki fiyattan satılmıyor.</p>
+      <p class="aside">Bunların hepsi arsaya para ödenmeden önce görülebilecek şeyler.</p>
+    </div>
+  </div>
+</section>
+
+<section id="nasil" class="bg-surface">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Nasıl çalışıyor?</h2>
+    </div>
+    <ol class="how">
+      <li>
+        <span class="num" aria-hidden="true">1</span>
+        <h3>Belgeleri gönderiyorsunuz</h3>
+        <p>Ada ve parsel numarası, imar durumu, tapu kaydı ve varsa sözleşme taslağı yeterli. Eksik olanları birlikte tamamlıyoruz.</p>
+      </li>
+      <li>
+        <span class="num" aria-hidden="true">2</span>
+        <h3>Parseli inceliyoruz</h3>
+        <p>İmar, tapu, piyasa, maliyet ve finansman tarafını aynı dosyada değerlendiriyoruz. Hesapları yazılımla yapıyoruz; sonuçları gayrimenkul ve gayrimenkul hukuku uzmanlarımız tek tek kontrol ediyor.</p>
+      </li>
+      <li>
+        <span class="num" aria-hidden="true">3</span>
+        <h3>Raporu alıyorsunuz</h3>
+        <p>Raporda açık bir öneri, kritik riskler, iyi, baz ve kötü senaryolar ile arsa için ödenebilecek en yüksek makul fiyat yer alıyor.</p>
+      </li>
+    </ol>
+
+    <div class="lookfor">
+      <div>
+        <h3>Neye bakıyoruz?</h3>
+        <p>Her parselde aynı sırayla ilerliyoruz.</p>
+      </div>
+      <dl class="check-list">
+        <div style="--c: var(--accent)">
+          <dt>İmar</dt>
+          <dd>Plan fonksiyonu, emsal, TAKS ve kat sınırından projenin kaç daireye çıkabileceğini hesaplıyoruz.</dd>
+        </div>
+        <div style="--c: var(--risk)">
+          <dt>Tapu ve mülkiyet</dt>
+          <dd>Mülkiyet müşterek mi, iştirak halinde mi, kaç paydaş var, ipotek, haciz ya da şerh bulunuyor mu, bakıyoruz. Paylaşılmamış mirasta tek bir mirasçının imzası bile işi durdurabiliyor.</dd>
+        </div>
+        <div style="--c: var(--fin)">
+          <dt>Piyasa</dt>
+          <dd>Bölgedeki gerçekleşmiş satışları ve ilanları karşılaştırıp m² fiyatını, satış hızını ve rakip projeleri çıkarıyoruz.</dd>
+        </div>
+        <div style="--c: var(--fin)">
+          <dt>Maliyet ve finansman</dt>
+          <dd>İnşaat maliyetini hesaplıyor, özkaynak, kredi ve hasılat paylaşımı seçeneklerini yan yana koyuyoruz.</dd>
+        </div>
+        <div style="--c: var(--risk)">
+          <dt>Sözleşme</dt>
+          <dd>Kat karşılığı ve satış sözleşmelerinde teslim, fesih, teminat ve cezai şart maddelerini okuyoruz.</dd>
+        </div>
+        <div style="--c: var(--go)">
+          <dt>Karar</dt>
+          <dd>Hepsini bir araya getirip öneriyi yazıyor ve arsa için pazarlık aralığını çıkarıyoruz.</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="ornek" class="is-dark">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Örnek bir rapordan</h2>
+      <p class="lede">Aşağıdaki ekran, 420 daireli bir konut projesi için hazırladığımız örnek rapordan alındı. Rakamlar gerçek bir parsele ait değil; sistemin nasıl düşündüğünü göstermek için kurgulandı.</p>
+    </div>
+
+    <div class="board">
+      <div class="board-bar">
+        <strong>Karar özeti</strong>
+        <span>Örnek konut projesi</span>
+        <span>420 daire</span>
+        <span>Baz senaryo</span>
+        <span class="end">Örnek veriler</span>
+      </div>
+
+      <div class="board-top">
+        <div class="verdict-block">
+          <span class="chip-go">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#1f7a4a"/><path d="M4.8 8.2 7 10.3 11.2 5.9" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            ŞARTLI AL
+          </span>
+          <p><strong>Genel değerlendirme olumlu.</strong></p>
+          <p>Ancak finansman, sözleşme ve tapu riskleri çözülmeden işlem tamamlanmamalı.</p>
+        </div>
+        <div class="tiles">
+          <div class="tile"><span class="tile-label">Tahmini gelir</span><span class="tile-value">142,8 M$</span><span class="tile-sub">420 daire × 340.000 $</span></div>
+          <div class="tile"><span class="tile-label">İnşaat maliyeti</span><span class="tile-value">72 M$</span><span class="tile-sub">Toplam yatırım senaryoya göre değişiyor</span></div>
+          <div class="tile"><span class="tile-label">Proje kârı</span><span class="tile-value">24,8 M$</span><span class="tile-sub">Satış gelirinin %17,4'ü</span></div>
+          <div class="tile"><span class="tile-label">IRR</span><span class="tile-value">%21,4</span><span class="tile-sub">ROE ve başa baş noktası raporda</span></div>
+        </div>
+      </div>
+
+      <div class="board-due">
+        <div class="due">
+          <h3 class="ledger-head" style="--c: var(--accent)">İmar durumu</h3>
+          <dl class="rows">
+            <div><dt>Plan fonksiyonu</dt><dd>Konut alanı</dd></div>
+            <div><dt>Parsel alanı</dt><dd>22.000 m²</dd></div>
+            <div><dt>Emsal (KAKS)</dt><dd>2,50</dd></div>
+            <div><dt>Emsal inşaat alanı</dt><dd>55.000 m²</dd></div>
+            <div><dt>TAKS</dt><dd>0,30</dd></div>
+            <div><dt>Yençok</dt><dd>15 kat</dd></div>
+            <div><dt>Proje kapasitesi</dt><dd>420 daire</dd></div>
+          </dl>
+          <p class="due-note">Ortalama daire 145 m² brüt. Balkon ve ortak alan gibi emsal dışı alanlar plan notlarına göre ayrıca hesaplanır.</p>
+        </div>
+
+        <div class="due">
+          <h3 class="ledger-head" style="--c: var(--risk)">Tapu ve mülkiyet</h3>
+          <dl class="rows">
+            <div><dt>Mülkiyet türü</dt><dd>Müşterek (paylı), 6 paydaş</dd></div>
+            <div><dt>İştirak halinde pay</dt><dd>1/6 pay, 3 mirasçı</dd></div>
+            <div><dt>İpotek</dt><dd>1, banka lehine <span class="pill pill-mid">Orta</span></dd></div>
+            <div><dt>Haciz</dt><dd>1, paydaş payında <span class="pill pill-high">Yüksek</span></dd></div>
+            <div><dt>Şerh</dt><dd>Yok <span class="pill pill-ok">Uygun</span></dd></div>
+            <div><dt>İrtifak / beyan</dt><dd>Yok <span class="pill pill-ok">Uygun</span></dd></div>
+          </dl>
+          <p class="due-note">Kat karşılığı sözleşme için tüm paydaşların ve elbirliği payındaki mirasçıların imzası gerekir (TMK m. 692, 702). Bir paydaş payını üçüncü kişiye satarsa diğerleri önalım hakkını kullanabilir (TMK m. 732). Haciz kaldırılmadan devir yapılmamalı.</p>
+        </div>
+
+        <div class="due">
+          <h3 class="ledger-head" style="--c: var(--fin)">Piyasa</h3>
+          <figure class="mk" aria-label="Bölgedeki emsal satış fiyatı 2.200 ile 2.600 dolar/m² arasında; projede 2.350 dolar/m² kullanıldı.">
+            <div class="mk-plot">
+              <div class="mk-axis"></div>
+              <div class="mk-band" style="left: 30%; width: 40%;" title="Emsal satış aralığı: 2.200–2.600 $/m²"></div>
+              <div class="mk-mark" style="left: 45%;" title="Projede kullanılan: 2.350 $/m²"><span>Proje 2.350</span></div>
+              <span class="mk-tick" style="left: 10%;">2.000</span>
+              <span class="mk-tick" style="left: 30%;">2.200</span>
+              <span class="mk-tick" style="left: 50%;">2.400</span>
+              <span class="mk-tick" style="left: 70%;">2.600</span>
+              <span class="mk-tick" style="left: 90%;">2.800</span>
+            </div>
+            <figcaption class="due-src">$/m². Bant, bölgedeki emsal satış aralığını gösteriyor.</figcaption>
+          </figure>
+          <dl class="rows">
+            <div><dt>Emsal satış fiyatı</dt><dd>2.200–2.600 $/m²</dd></div>
+            <div><dt>Projede kullanılan</dt><dd>2.350 $/m²</dd></div>
+            <div><dt>Satış hızı</dt><dd>Ayda 12–15 daire</dd></div>
+            <div><dt>Satış süresi</dt><dd>28–35 ay</dd></div>
+            <div><dt>Rakip arz</dt><dd>4 proje, 1.850 konut</dd></div>
+          </dl>
+          <p class="due-note">Fiyat %10 düşerse gelir 128,5 M$ olur ve proje kârı 24,8 M$'dan 10,5 M$'a iner (maliyetler sabit).</p>
+          <p class="due-src">Veri: son 12 ayda 38 tapu satışı ve 214 ilan.</p>
+        </div>
+      </div>
+
+      <div class="board-bottom">
+        <div class="risks">
+          <h3 class="ledger-head" style="--c: var(--risk)">Kritik riskler</h3>
+          <ol class="risk-list">
+            <li><span>Finansman maliyeti</span><span class="pill pill-high">Önce çözülmeli</span></li>
+            <li><span>Sözleşme maddesi</span><span class="pill pill-high">Önce çözülmeli</span></li>
+            <li><span>Tapu: haciz ve paydaş onayı</span><span class="pill pill-high">Önce çözülmeli</span></li>
+            <li><span>Satış fiyatı hassasiyeti</span><span class="pill pill-watch">İzlenmeli</span></li>
+            <li><span>Maliyet sapması</span><span class="pill pill-watch">İzlenmeli</span></li>
+            <li><span>İmar ve izin süreci</span><span class="pill pill-watch">İzlenmeli</span></li>
+          </ol>
+        </div>
+        <div class="deal">
+          <h3 class="ledger-head" style="--c: var(--go)">Pazarlık</h3>
+          <figure class="range">
+            <figcaption class="deal-cap">Arsa fiyatı, milyon $</figcaption>
+            <div class="range-plot" role="img" aria-label="Talep edilen arsa fiyatı 30 milyon dolar. Maksimum rasyonel fiyat 24,7 milyon dolar. Önerilen aralık 21,5 ile 24,7 milyon dolar arası. Talep ile rasyonel fiyat arasındaki fark 5,3 milyon dolar.">
+              <div class="rp-axis"></div>
+              <div class="rp-band" style="left: 13.64%; width: 29.09%;" title="Önerilen aralık: 21,5–24,7 M$"></div>
+              <div class="rp-gap" style="left: 42.73%; width: 48.18%;"><span>5,3 M$ fark</span></div>
+              <div class="rp-mark rp-max" style="left: 42.73%;" title="Maksimum rasyonel fiyat: 24,7 M$"><span class="rp-label"><span>Maks. rasyonel </span><b>24,7</b></span></div>
+              <div class="rp-mark rp-ask" style="left: 90.91%;" title="Talep edilen: 30 M$"><span class="rp-label">Talep <b>30</b></span></div>
+              <span class="rp-tick" style="left: 0%;">20</span>
+              <span class="rp-tick" style="left: 18.18%;">22</span>
+              <span class="rp-tick" style="left: 36.36%;">24</span>
+              <span class="rp-tick" style="left: 54.55%;">26</span>
+              <span class="rp-tick" style="left: 72.73%;">28</span>
+              <span class="rp-tick" style="left: 90.91%;">30</span>
+            </div>
+            <dl class="range-key">
+              <div><dt><span class="sw sw-ask" aria-hidden="true"></span>Talep edilen arsa fiyatı</dt><dd>30 M$</dd></div>
+              <div><dt><span class="sw sw-max" aria-hidden="true"></span>Maksimum rasyonel fiyat</dt><dd>24,7 M$</dd></div>
+              <div><dt><span class="sw sw-band" aria-hidden="true"></span>Önerilen aralık</dt><dd>21,5 – 24,7 M$</dd></div>
+              <div><dt><span class="sw sw-gap" aria-hidden="true"></span>Talep ile rasyonel fiyat farkı</dt><dd>5,3 M$</dd></div>
+            </dl>
+          </figure>
+          <p class="deal-note">Arsa sahibi 30 M$ istiyor. Hesaplara göre 24,7 M$'ın üzerinde ödenen her dolar projenin kârlılığını hedefin altına çekiyor; masaya bu rakamla oturmak gerekiyor.</p>
+        </div>
+      </div>
+      <p class="board-foot">Hukuki tespitler uzman hukukçularımızın kontrolünden geçer, ancak hukuki görüş yerine geçmez.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sozlesme" class="bg-surface">
+  <div class="wrap legal-grid">
+    <div class="legal-copy">
+      <h2>Sözleşmeyi madde madde okuyoruz.</h2>
+      <div class="prose">
+        <p>Kat karşılığı sözleşmelerde sorun çoğu zaman tek bir belirsiz cümleden çıkıyor. "Makul süre içinde teslim" gibi bir ifade, gecikme olduğunda arsa sahibinin elini boş bırakabiliyor.</p>
+        <p>Riskli maddeyi işaretliyor, nedenini yazıyor ve yerine kullanılabilecek metni öneriyoruz. Dayanak olarak ilgili kanun maddesini de ekliyoruz.</p>
+        <p>Tespitleri gayrimenkul hukukunda uzman hukukçularımız kontrol ediyor. İmzadan önce son sözü yine kendi avukatınızın söylemesini öneriyoruz; bizim raporumuz onun işini kısaltıyor.</p>
+      </div>
+    </div>
+
+    <article class="clause-card" aria-label="Örnek sözleşme incelemesi">
+      <div class="cc-head">
+        <h3>Kat karşılığı inşaat sözleşmesi</h3>
+        <small>Örnek inceleme</small>
+      </div>
+      <div class="cc-areas">
+        <div>Teslim <span class="pill pill-high">Yüksek</span></div>
+        <div>Cezai şart <span class="pill pill-high">Yüksek</span></div>
+        <div>Teminat <span class="pill pill-mid">Orta</span></div>
+        <div>Fesih <span class="pill pill-high">Yüksek</span></div>
+        <div>Yetki <span class="pill pill-ok">Uygun</span></div>
+        <div>Bağımsız bölüm dağılımı <span class="pill pill-ok">Uygun</span></div>
+      </div>
+      <div class="cc-body">
+        <div class="cc-clause"><strong>Madde 9: Teslim</strong><span class="pill pill-high">Yüksek risk</span></div>
+        <div class="cc-block">
+          <span class="cc-label">Mevcut metin</span>
+          <p class="cc-old">“Yüklenici, bağımsız bölümleri inşaatın tamamlanmasını takiben makul bir süre içinde arsa sahibine teslim eder.”</p>
+        </div>
+        <div class="cc-block">
+          <span class="cc-label">Neden riskli</span>
+          <p class="cc-why">“Makul süre” teslim için kesin bir tarih belirlemiyor. Gecikme halinde uygulanacak cezai şart ve arsa sahibinin fesih hakkı da tanımlanmamış.</p>
+        </div>
+        <div class="cc-block">
+          <span class="cc-label">Önerilen metin</span>
+          <p class="cc-new">“Yüklenici, bağımsız bölümleri yapı ruhsatı tarihinden itibaren 30 ay içinde, iskân belgesi alınmış olarak arsa sahibine teslim eder. Geciken her ay için arsa sahibine düşen bağımsız bölümlerin emsal aylık kira bedeli tutarında cezai şart öder. Gecikme 6 ayı aşarsa arsa sahibi sözleşmeyi feshedebilir.”</p>
+        </div>
+      </div>
+      <p class="cc-foot">Dayanak: TBK m. 179 (cezai şart), TBK m. 473 (eser sözleşmesinde gecikme)</p>
+    </article>
+  </div>
+</section>
+
+<section id="fiyatlar">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Fiyatlar</h2>
+      <p class="lede">İlk raporları proje bazında hazırlıyoruz. Pilot süresince fiyatları müşterilerimizle birlikte netleştiriyoruz; aşağıdakiler başlangıç noktası.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <div class="plan-top"><h3>Rapor</h3><span class="badge">Buradan başlıyoruz</span></div>
+        <p class="plan-for">Tek bir parsel için</p>
+        <p class="price">2.500–10.000&nbsp;$<small>proje başına, parselin büyüklüğüne göre</small></p>
+        <p>Ön fizibilite, risk listesi ve pazarlık aralığı içeren rapor.</p>
+        <a class="btn btn-primary" href="#basvuru" data-topic="pilot">Rapor isteyin</a>
+      </div>
+      <div class="plan">
+        <div class="plan-top"><h3>Pro</h3></div>
+        <p class="plan-for">Müteahhitler ve danışmanlar için</p>
+        <p class="price">1.000&nbsp;$+<small>aylık abonelik</small></p>
+        <p>Sürekli parsel değerlendiren ekipler için düzenli analiz.</p>
+        <a class="btn btn-outline" href="#basvuru" data-topic="pro">Görüşelim</a>
+      </div>
+      <div class="plan">
+        <div class="plan-top"><h3>Kurumsal</h3></div>
+        <p class="plan-for">Fonlar, bankalar ve geliştiriciler için</p>
+        <p class="price">100.000&nbsp;$+<small>yıllık lisans</small></p>
+        <p>Portföy ölçeğinde analiz ve kurum içi kullanım.</p>
+        <a class="btn btn-outline" href="#basvuru" data-topic="kurumsal">İletişime geçin</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ankara" class="bg-surface">
+  <div class="wrap">
+    <div class="showcase">
+      <div class="sec-head">
+        <h2 id="ankara-title">Ankara'dan başlıyoruz</h2>
+        <p class="lede">İlk pilot projeleri Ankara, İstanbul ve İzmir'den seçiyoruz. Ankara'nın ticari gayrimenkul ölçeğinden birkaç kare:</p>
+      </div>
+
+      <div class="slider" id="slider" role="region" aria-roledescription="carousel" aria-labelledby="ankara-title">
+        <div class="slides" id="slides">
+          <figure class="slide is-active" role="group" aria-roledescription="slayt" aria-label="1 / 5">
+            <img src="img/ankamall-1600.jpg" srcset="img/ankamall-800.jpg 800w, img/ankamall-1600.jpg 1600w" sizes="(max-width: 1200px) 100vw, 1040px" width="1600" height="1200" loading="lazy" alt="ANKAmall'ın gece ışıklandırılmış girişi ve önündeki otopark">
+            <figcaption>
+              <span class="slide-loc">Akköprü, Yenimahalle</span>
+              <span class="slide-name">ANKAmall</span>
+              <small class="slide-credit">Fotoğraf: <a href="https://commons.wikimedia.org/wiki/File:AnkaMall_2024.jpg" target="_blank" rel="noopener noreferrer">Kayra</a>, 2024, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></small>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slayt" aria-label="2 / 5" aria-hidden="true">
+            <img src="img/armada-1600.jpg" srcset="img/armada-800.jpg 800w, img/armada-1600.jpg 1600w" sizes="(max-width: 1200px) 100vw, 1040px" width="1600" height="1067" loading="lazy" alt="Armada AVM'nin alacakaranlıkta ışıklı cephesi ve yanındaki ofis kulesi">
+            <figcaption>
+              <span class="slide-loc">Söğütözü, Yenimahalle</span>
+              <span class="slide-name">Armada</span>
+              <small class="slide-credit">Fotoğraf: <a href="https://commons.wikimedia.org/wiki/File:Ankara_Armada_Al%C4%B1%C5%9Fveri%C5%9F_Merkezi.JPG" target="_blank" rel="noopener noreferrer">SAİT71</a>, 2014, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></small>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slayt" aria-label="3 / 5" aria-hidden="true">
+            <img src="img/cepa-1600.jpg" srcset="img/cepa-800.jpg 800w, img/cepa-1600.jpg 1600w" sizes="(max-width: 1200px) 100vw, 1040px" width="1600" height="1200" loading="lazy" alt="Cepa AVM'nin cam cephesi ve önündeki meydan">
+            <figcaption>
+              <span class="slide-loc">Eskişehir Yolu, Çankaya</span>
+              <span class="slide-name">Cepa</span>
+              <small class="slide-credit">Fotoğraf: <a href="https://commons.wikimedia.org/wiki/File:Cepa_avm,_2022.jpg" target="_blank" rel="noopener noreferrer">Modern primat</a>, 2022, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></small>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slayt" aria-label="4 / 5" aria-hidden="true">
+            <img src="img/panora-1600.jpg" srcset="img/panora-800.jpg 800w, img/panora-1600.jpg 1600w" sizes="(max-width: 1200px) 100vw, 1040px" width="1600" height="900" loading="lazy" alt="Panora AVM'nin geometrik desenli cam kubbesi, alttan görünüm">
+            <figcaption>
+              <span class="slide-loc">Oran, Çankaya</span>
+              <span class="slide-name">Panora</span>
+              <small class="slide-credit">Fotoğraf: <a href="https://commons.wikimedia.org/wiki/File:Panora_AVM_(03.01.2024).jpg" target="_blank" rel="noopener noreferrer">Tugrul Ates</a>, 2024, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a></small>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slayt" aria-label="5 / 5" aria-hidden="true">
+            <img src="img/maximumlife-1600.jpg" srcset="img/maximumlife-800.jpg 800w, img/maximumlife-1600.jpg 1600w" sizes="(max-width: 1200px) 100vw, 1040px" width="1600" height="900" loading="lazy" alt="Maximum Life Eryaman projesinin açık hava alışveriş caddesini ve konut kulelerini gösteren tasarım görseli">
+            <figcaption>
+              <span class="slide-loc">Eryaman, Etimesgut <span class="slide-badge">Yapım aşamasında</span></span>
+              <span class="slide-name">Maximum Life Eryaman</span>
+              <small class="slide-credit">Tasarım görseli: <a href="https://maximumlifeeryaman.com/" target="_blank" rel="noopener noreferrer">Maximum Life Eryaman</a>, izinle kullanılmıştır</small>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="slider-ui">
+          <span class="counter"><b id="sl-cur">01</b> / 05</span>
+          <div class="progress" aria-hidden="true"><span id="sl-bar"></span></div>
+          <button class="sl-btn" id="sl-prev" type="button" aria-label="Önceki görsel">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="sl-btn" id="sl-play" type="button" aria-label="Otomatik geçişi durdur">
+            <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5v9M10.5 3.5v9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2v9.6L12.6 8Z" fill="currentColor"/></svg>
+          </button>
+          <button class="sl-btn" id="sl-next" type="button" aria-label="Sonraki görsel">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+
+        <ul class="thumbs">
+          <li><button class="thumb" type="button" aria-current="true"><img src="img/ankamall-360.jpg" width="360" height="270" alt="" loading="lazy">ANKAmall</button></li>
+          <li><button class="thumb" type="button" aria-current="false"><img src="img/armada-360.jpg" width="360" height="240" alt="" loading="lazy">Armada</button></li>
+          <li><button class="thumb" type="button" aria-current="false"><img src="img/cepa-360.jpg" width="360" height="270" alt="" loading="lazy">Cepa</button></li>
+          <li><button class="thumb" type="button" aria-current="false"><img src="img/panora-360.jpg" width="360" height="202" alt="" loading="lazy">Panora</button></li>
+          <li><button class="thumb" type="button" aria-current="false"><img src="img/maximumlife-360.jpg" width="360" height="202" alt="" loading="lazy">Maximum Life</button></li>
+        </ul>
+      </div>
+      <p class="showcase-note">ANKAmall, Armada, Cepa ve Panora fotoğrafları Wikimedia Commons'tan, altlarında belirtilen lisansla kullanıldı; bu yapıların PARSEL AI ile bir iş birliği yok. Maximum Life Eryaman görseli proje sahibinin izniyle kullanılan bir tasarım görselidir.</p>
+    </div>
+  </div>
+</section>
+
+<section id="hakkimizda">
+  <div class="wrap about">
+    <div>
+      <h2>Kim yapıyor?</h2>
+      <div class="prose">
+        <p>PARSEL AI'ı gayrimenkul yatırımı ve gayrimenkul hukuku alanlarında uzman kişiler geliştiriyor. İmar, piyasa ve finans hesaplarını gayrimenkul uzmanları; tapu ve sözleşme incelemelerini gayrimenkul hukukunda uzman hukukçular kontrol ediyor.</p>
+        <p>Amacımız, bir arsa için verilen yatırım kararını daha sağlam bilgiye dayandırmak ve bu bilgiyi müteahhitten bireysel yatırımcıya kadar herkesin anlayacağı bir dile çevirmek.</p>
+        <p>İlk 10 projeyi küçük ölçekte, her birine yakından bakarak yürütüyoruz. Hangi bilginin gerçekten işe yaradığını bu projelerden öğrenip ürünü ona göre geliştireceğiz. İletişim için Yusuf Sezer'e yazabilirsiniz.</p>
+        <p><a href="mailto:yusufsezer2019@gmail.com">yusufsezer2019@gmail.com</a></p>
+      </div>
+    </div>
+    <aside class="inv-box" aria-labelledby="inv-title">
+      <h3 id="inv-title">Yatırımcılar için</h3>
+      <p>Bugün dışarıdan büyük bir yatırım aramıyoruz. Önce ürünü gerçek müşteriler ve gerçek gelirle kanıtlamak istiyoruz.</p>
+      <p>Pilot projelerden düzenli gelir ve kullanım verisi oluştuğunda, Türkiye'de büyümek ve ardından Körfez pazarına açılmak için yaklaşık 12 milyon dolarlık bir büyüme yatırımı arayacağız.</p>
+      <a class="btn btn-outline" href="#basvuru" data-topic="yatirim">Sunumu isteyin</a>
+    </aside>
+  </div>
+</section>
+
+<section id="basvuru" class="apply">
+  <div class="wrap apply-grid">
+    <div class="apply-copy">
+      <h2>Elinizde bir parsel mi var?</h2>
+      <p class="lede">Kısaca anlatın, size dönelim. Pilot projelerde raporu sizinle birlikte hazırlıyor, eksik bilgiyi beraber tamamlıyoruz.</p>
+      <p class="contact">Doğrudan yazmak isterseniz: <strong>Yusuf Sezer</strong>, <a href="mailto:yusufsezer2019@gmail.com">yusufsezer2019@gmail.com</a></p>
+    </div>
+
+    <form class="form" id="apply-form" novalidate>
+      <noscript><p class="noscript-note">Formu göndermek için tarayıcınızda JavaScript açık olmalı. Dilerseniz doğrudan <a href="mailto:yusufsezer2019@gmail.com">yusufsezer2019@gmail.com</a> adresine yazabilirsiniz.</p></noscript>
+      <input type="hidden" name="_subject" value="PARSEL AI: yeni başvuru">
+      <input type="hidden" name="_template" value="table">
+      <fieldset class="topic">
+        <legend>Ne için yazıyorsunuz?</legend>
+        <div class="topics">
+          <label class="topic-opt"><input id="f-konu-pilot" type="radio" name="konu" value="pilot" checked><span>Pilot proje / rapor</span></label>
+          <label class="topic-opt"><input id="f-konu-pro" type="radio" name="konu" value="pro"><span>Pro abonelik</span></label>
+          <label class="topic-opt"><input id="f-konu-kurumsal" type="radio" name="konu" value="kurumsal"><span>Kurumsal lisans</span></label>
+          <label class="topic-opt"><input id="f-konu-yatirim" type="radio" name="konu" value="yatirim"><span>Yatırım / ortaklık</span></label>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="f-ad">Adınız soyadınız</label>
+        <input id="f-ad" name="ad" type="text" autocomplete="name" required>
+      </div>
+      <div class="field">
+        <label for="f-kurum">Kurum <span class="opt">(isteğe bağlı)</span></label>
+        <input id="f-kurum" name="kurum" type="text" autocomplete="organization">
+      </div>
+      <div class="field">
+        <label for="f-eposta">E-posta</label>
+        <input id="f-eposta" name="email" type="email" autocomplete="email" required>
+      </div>
+      <div class="field">
+        <label for="f-tel">Telefon <span class="opt">(isteğe bağlı)</span></label>
+        <input id="f-tel" name="telefon" type="tel" autocomplete="tel">
+      </div>
+      <div class="field">
+        <label for="f-rol">Rolünüz</label>
+        <select id="f-rol" name="rol" required>
+          <option value="" disabled selected>Seçin</option>
+          <option value="muteahhit">Müteahhit / geliştirici</option>
+          <option value="gayrimenkul-yatirimcisi">Gayrimenkul yatırımcısı</option>
+          <option value="arsa-sahibi">Arsa sahibi</option>
+          <option value="danisman">Danışman</option>
+          <option value="fon-banka">Fon / banka</option>
+          <option value="diger">Diğer</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="f-sehir">Parsel hangi şehirde? <span class="opt">(isteğe bağlı)</span></label>
+        <select id="f-sehir" name="sehir">
+          <option value="" selected>Seçin</option>
+          <option>Ankara</option>
+          <option>İstanbul</option>
+          <option>İzmir</option>
+          <option>Diğer</option>
+        </select>
+      </div>
+      <div class="field full">
+        <label for="f-not">Parsel hakkında birkaç cümle <span class="opt">(isteğe bağlı)</span></label>
+        <textarea id="f-not" name="not" placeholder="Örneğin ada / parsel, imar durumu, istenen fiyat, sözleşme aşaması…"></textarea>
+      </div>
+      <div class="hp" aria-hidden="true">
+        <label for="f-web">Bu alanı boş bırakın</label>
+        <input id="f-web" name="website" type="text" tabindex="-1" autocomplete="off">
+      </div>
+      <p class="status" id="form-status" role="status" aria-live="polite"></p>
+      <div class="form-foot">
+        <button class="btn btn-primary" id="f-submit" type="submit">Gönder</button>
+        <small>Bilgilerinizi yalnızca başvurunuzu değerlendirmek için kullanıyoruz. Ayrıntılar <a href="kvkk.html">KVKK Aydınlatma Metni</a>'nde.</small>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <a class="brand" href="#top">
+      <svg width="24" height="24" viewBox="0 0 28 28" aria-hidden="true"><rect x=".75" y=".75" width="26.5" height="26.5" rx="4" fill="none" stroke="#2b3757" stroke-width="1.5"/><path d="M7 9.5 18.5 7.5 20.5 20 8.5 21.5Z" fill="#8aa9f7" fill-opacity=".25" stroke="#8aa9f7" stroke-width="1.5" stroke-linejoin="round"/></svg>
+      <span>PARSEL <b>AI</b></span>
+    </a>
+    <ul class="footer-links">
+      <li><a href="#nasil">Nasıl çalışıyor</a></li>
+      <li><a href="#ornek">Örnek rapor</a></li>
+      <li><a href="#fiyatlar">Fiyatlar</a></li>
+      <li><a href="#basvuru">Başvuru</a></li>
+      <li><a href="kvkk.html">KVKK</a></li>
+      <li><a href="mailto:yusufsezer2019@gmail.com">E-posta</a></li>
+    </ul>
+    <div class="footer-legal">
+      <span>© <span id="year">2026</span> PARSEL AI</span>
+      <span>Raporlarımız karar desteği içindir; yatırım danışmanlığı ya da hukuki görüş yerine geçmez.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js" defer></script>
+</body>
+</html>
